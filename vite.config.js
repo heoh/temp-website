@@ -4,6 +4,8 @@ import eslint from "vite-plugin-eslint";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
+const __dirname = path.resolve();
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -11,5 +13,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: `/${path.basename(path.resolve())}/`,
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  base: `/${path.basename(__dirname)}/`,
 });
