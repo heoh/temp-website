@@ -1,0 +1,13 @@
+@charset "UTF-8"
+/* CSS Document */
+
+
+default {} 
+
+
+
+
+.app-hidden-text:not(:hover) {
+  text-shadow: 0px 0px 10px var(--wp--preset--color--contrast);
+  color: transparent;
+}
